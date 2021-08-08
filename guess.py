@@ -16,7 +16,7 @@ extreme = 'Extreme'
 
 difficulty = input()
 
-if difficulty == easy:
+if difficulty == extreme:
     number = random.randint(1, 20)
     print('\nWell, ' + playerName + ', I am thinking of a number between 1 and 20.')
 
@@ -68,7 +68,7 @@ elif difficulty == hard:
     if guess != number:
         number = str(number)
         print('\nNope. The number I was thinking of was ' + number + '.')
-elif difficulty == extreme:
+elif difficulty == easy:
     number = random.randint(1, 5)
     print('\nWell, ' + playerName + ', I am thinking of a number between 1 and 5.')
 
