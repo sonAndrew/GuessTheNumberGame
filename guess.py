@@ -5,28 +5,92 @@ guessesTaken = 0
 print('Hello! What is your name?')
 playerName = input()
 
-number = random.randint(1, 20)
-print('Well, ' + playerName + ', I am thinking of a number between 1 and 20.')
+print('\nThanks for playing ' + playerName + '.')
+print("\nHow to play: This is a guess the number terminal game. You choose your difficulty from EASY to EXTREME. You then guess a random number between two numbers. That's all.")
 
-for i in range(6):
-    print('Take a guess.') # Four spaces in front of "print"
-    guess = input()
-    guess = int(guess)
-    guessesTaken += 1
+print('\nNOW CHOOSE YOUR DIFFICULTY!')
+print('Easy, Hard, Extreme')
+easy = 'Easy'
+hard = 'Hard'
+extreme = 'Extreme'
 
-    if guess < number:
-        print('Your guess is too low ' + playerName + '.') # Eight spaces in front of "print"
+difficulty = input()
 
-    if guess > number:
-        print('Your guess is too high ' + playerName + '.')
+if difficulty == easy:
+    number = random.randint(1, 20)
+    print('\nWell, ' + playerName + ', I am thinking of a number between 1 and 20.')
+
+    for i in range(6):
+        print('\nTake a guess.') # Four spaces in front of "print"
+        guess = input()
+        guess = int(guess)
+        guessesTaken += 1
+
+        if guess < number:
+            print('\nYour guess is too low ' + playerName + '.') # Eight spaces in front of "print"
+
+        if guess > number:
+            print('\nYour guess is too high ' + playerName + '.')
+
+        if guess == number:
+            break
 
     if guess == number:
-        break
+        guessesTaken = str(guessesTaken)
+        print('\nGood job, ' + playerName + '! You guessed my number in ' + guessesTaken + ' guesses!')
 
-if guess == number:
-    guessesTaken = str(guessesTaken)
-    print('Good job, ' + playerName + '! You guessed my number in ' + guessesTaken + ' guesses!')
+    if guess != number:
+        number = str(number)
+        print('\nNope. The number I was thinking of was ' + number + '.')
+elif difficulty == hard:
+    number = random.randint(1, 10)
+    print('\nWell, ' + playerName + ', I am thinking of a number between 1 and 10.')
 
-if guess != number:
-    number = str(number)
-    print('Nope. The number I was thinking of was ' + number + '.')
+    for i in range(4):
+        print('\nTake a guess.') # Four spaces in front of "print"
+        guess = input()
+        guess = int(guess)
+        guessesTaken += 1
+
+        if guess < number:
+            print('\nYour guess is too low ' + playerName + '.') # Eight spaces in front of "print"
+
+        if guess > number:
+            print('\nYour guess is too high ' + playerName + '.')
+
+        if guess == number:
+            break
+
+    if guess == number:
+        guessesTaken = str(guessesTaken)
+        print('\nGood job, ' + playerName + '! You guessed my number in ' + guessesTaken + ' guesses!')
+
+    if guess != number:
+        number = str(number)
+        print('\nNope. The number I was thinking of was ' + number + '.')
+elif difficulty == extreme:
+    number = random.randint(1, 5)
+    print('\nWell, ' + playerName + ', I am thinking of a number between 1 and 5.')
+
+    for i in range(2):
+        print('\nTake a guess.') # Four spaces in front of "print"
+        guess = input()
+        guess = int(guess)
+        guessesTaken += 1
+
+        if guess < number:
+            print('\nYour guess is too low ' + playerName + '.') # Eight spaces in front of "print"
+
+        if guess > number:
+            print('\nYour guess is too high ' + playerName + '.')
+
+        if guess == number:
+            break
+
+    if guess == number:
+        guessesTaken = str(guessesTaken)
+        print('\nGood job, ' + playerName + '! You guessed my number in ' + guessesTaken + ' guesses!')
+
+    if guess != number:
+        number = str(number)
+        print('\nNope. The number I was thinking of was ' + number + '.')
