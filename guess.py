@@ -6,7 +6,7 @@ print('Hello! What is your name?')
 playerName = input()
 
 print('\nThanks for playing ' + playerName + '.')
-print("\nHow to play: This is a guess the number terminal game. You choose your difficulty from EASY to EXTREME. You then guess a random number between two numbers. That's all.")
+print("\nHow to play: This is a guess the number terminal game. You choose your difficulty from EASY to EXTREME. You then guess a random number between two numbers, including those numbers. That's all.")
 
 print('\nNOW CHOOSE YOUR DIFFICULTY!')
 print('Easy, Hard, Extreme')
