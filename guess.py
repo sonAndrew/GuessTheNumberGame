@@ -1,5 +1,6 @@
 # This is a Guess the Number game.
 import random
+
 guessesTaken = 0
 
 print('Hello! What is your name?')
@@ -9,11 +10,12 @@ print('\nThanks for playing ' + playerName + '.')
 print("\nHow to play: This is a guess the number terminal game. You choose your difficulty from EASY to EXTREME. You then guess a random number between two numbers, including those numbers. That's all.")
 
 print('\nNOW CHOOSE YOUR DIFFICULTY!')
-print('Easy, Hard, Extreme')
+
 easy = 'Easy'
 hard = 'Hard'
 extreme = 'Extreme'
 
+print('\nEnter your difficulty: ' + easy + ", " + hard + ', or ' + extreme)
 difficulty = input()
 
 if difficulty == extreme:
@@ -94,3 +96,5 @@ elif difficulty == easy:
     if guess != number:
         number = str(number)
         print('\nNope. The number I was thinking of was ' + number + '.')
+else:
+    print('Sorry somthing went wrong! You did not enter the difficulty level correctly.')
