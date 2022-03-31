@@ -1,4 +1,9 @@
-# This is a Guess the Number game.
+"""
+    File: guess.py
+    About: This a Guess the Number game.
+"""
+# Imports: EasyFrame, random
+from breezypythongui import EasyFrame
 import random
 
 guessesTaken = 0
